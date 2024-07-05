@@ -2,7 +2,12 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
+        Text("Tutle Rock")
+        // method chaining 형태로 뷰를 수정
+        // 다만 이 View 는 Text("") 에서 생성한 instance 의 복제본임.
+        // Text 는 struct 고 값타입 구조체를 사용해 불변성을 유지, 선언형 프로그래밍에 활용
+            .font(.title)
+            
     }
 }
 
