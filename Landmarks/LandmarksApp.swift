@@ -26,8 +26,13 @@ struct LandmarksApp: App {
                 return ContentView()
             }
             
+            // Layout 연습용 View
+            let layoutPractice: () -> LayoutPracticeView = {
+                return LayoutPracticeView()
+            }
+            
             // WindowGroup 생성자 호출
-            let windowGroup = WindowGroup(content: windowGroupContent)
+            let windowGroup = WindowGroup(content: layoutPractice)
             
             // body 프로퍼티에서 WindowGroup 반환
             return windowGroup
