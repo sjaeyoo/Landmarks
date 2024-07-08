@@ -32,7 +32,7 @@ struct LandmarksApp: App {
             }
             
             // WindowGroup 생성자 호출
-            let windowGroup = WindowGroup(content: layoutPractice)
+            let windowGroup = WindowGroup(content: windowGroupContent)
             
             // body 프로퍼티에서 WindowGroup 반환
             return windowGroup

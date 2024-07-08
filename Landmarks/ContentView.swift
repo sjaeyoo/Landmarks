@@ -2,11 +2,17 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Tutle Rock")
-        // method chaining 형태로 뷰를 수정
-        // 다만 이 View 는 Text("") 에서 생성한 instance 의 복제본임.
-        // Text 는 struct 고 값타입 구조체를 사용해 불변성을 유지, 선언형 프로그래밍에 활용
-            .font(.title)
+        VStack (alignment: .leading) {
+            Text("Tutle Rock")
+                .font(.title)
+            HStack {
+                Text("Joshua Tree National Park")
+                    .font(.subheadline)
+                Spacer()
+                Text("California")
+                    .font(.subheadline)
+            }
+        }.padding()
             
     }
 }
@@ -16,7 +22,7 @@ struct ContentView: View {
 }
 
 
-/**
+/*
  import SwiftUI
 
  struct ContentView: View {
@@ -35,3 +41,15 @@ struct ContentView: View {
  }
  
  */
+
+/*
+    // 이러한 builder 패턴에서 뷰는 항상 새로 생성 됨. 구조체 사용. 선언형 UI 및 State 기반 시스템에서 값 타입의 불변성이 오류 발생가능성을 낮추기 때문.
+     Image(systemName: "globe")
+         .imageScale(.large)
+         .foregroundStyle(.tint)
+ 
+ 
+    
+ 
+ */
+
