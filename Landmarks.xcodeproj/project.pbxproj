@@ -15,6 +15,7 @@
 		2FED03D42C36586400DD62BE /* LandmarksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FED03D32C36586400DD62BE /* LandmarksUITests.swift */; };
 		2FED03D62C36586400DD62BE /* LandmarksUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FED03D52C36586400DD62BE /* LandmarksUITestsLaunchTests.swift */; };
 		2FED03E32C3BE65D00DD62BE /* LayoutPracticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FED03E22C3BE65D00DD62BE /* LayoutPracticeView.swift */; };
+		2FED03E52C3D0C8A00DD62BE /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FED03E42C3D0C8A00DD62BE /* CircleImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		2FED03D32C36586400DD62BE /* LandmarksUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarksUITests.swift; sourceTree = "<group>"; };
 		2FED03D52C36586400DD62BE /* LandmarksUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarksUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		2FED03E22C3BE65D00DD62BE /* LayoutPracticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutPracticeView.swift; sourceTree = "<group>"; };
+		2FED03E42C3D0C8A00DD62BE /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 				2FED03B82C36586300DD62BE /* LandmarksApp.swift */,
 				2FED03BA2C36586300DD62BE /* ContentView.swift */,
 				2FED03BC2C36586400DD62BE /* Assets.xcassets */,
+				2FED03E42C3D0C8A00DD62BE /* CircleImage.swift */,
 				2FED03BE2C36586400DD62BE /* Preview Content */,
 				2FED03E22C3BE65D00DD62BE /* LayoutPracticeView.swift */,
 			);
@@ -261,6 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2FED03BB2C36586300DD62BE /* ContentView.swift in Sources */,
+				2FED03E52C3D0C8A00DD62BE /* CircleImage.swift in Sources */,
 				2FED03B92C36586300DD62BE /* LandmarksApp.swift in Sources */,
 				2FED03E32C3BE65D00DD62BE /* LayoutPracticeView.swift in Sources */,
 			);
