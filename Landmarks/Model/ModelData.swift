@@ -3,6 +3,12 @@
 import Foundation
 
 
+// Observable 로 설정하면 데이터 변경이 발생할 때 SwiftUI 의 View 에 변경이 반영 됨
+@Observable
+class ModelData {
+    // landmark 데이터를 Observable 내부로 이동
+    var landmarks: [Landmark] = load("landmarkData.json")
+}
 
 
 
@@ -34,6 +40,3 @@ func load<T: Decodable>(_ filename: String) -> T {
     }
 }
 
-
-// 튜토리얼에서는 아예 전역으로 landmarks 를 불러와서 상시 접근 가능한 데이터로 처리했네. 데이터 크기에 따라 앱 초기화 속도에 영향을 끼칠 수 있지만 튜토리얼이니까 패스.
-var landmarks: [Landmark] = load("landmarkData.json")

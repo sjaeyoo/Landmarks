@@ -4,15 +4,22 @@ import SwiftUI
 
 
 
-//@main
-//struct LandmarksApp: App {
-//    var body: some Scene {
-//        WindowGroup {
-//            ContentView()
-//        }
-//    }
-//}
+@main
+struct LandmarksApp: App {
+    @State private var modelData = ModelData()
+    
+    
+    var body: some Scene {
+        WindowGroup {
+            ContentView()
+                .environment(modelData)
+            
+        }
+    }
+}
 
+
+/*
  // 위 코드 구조에서 생략된 부분을 명시적으로 작성한다면?
 @main   // App 의 entry point 정의
 struct LandmarksApp: App {
@@ -40,4 +47,6 @@ struct LandmarksApp: App {
         }
     }
 }
+ 
+ */
 

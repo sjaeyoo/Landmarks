@@ -8,11 +8,13 @@ struct LandmarkList: View {
     // 외부의 영향을 받게 하고 싶으면 Binding 으로 처리
     @State private var showFavoritesOnly = false
     
-    var landmarks: [Landmark]
+    // 환경변수로 데이터를 처리함. 왜일까? 어차피 상위에서 데이터를 로드해야되는건 같고 데이터를 넘겨주는 형태로 활용하는데. 그냥 예제라서 그런듯.
+    @Environment(ModelData.self) var modelData
+    
     
     // computed property 로 landmark 필터링. showFavoritesOnly 가 State기 때문에 변화의 영향을 filteredLandmarks 도 받음.
     var filteredLandmarks: [Landmark] {
-        landmarks.filter { landmark in
+        modelData.landmarks.filter { landmark in
             (!showFavoritesOnly || landmark.isFavorite)
         }
     }
@@ -49,7 +51,8 @@ struct LandmarkList: View {
 }
 
 #Preview {
-    LandmarkList(landmarks: landmarks)
+    LandmarkList()
+        .environment(ModelData())
 }
 
 
