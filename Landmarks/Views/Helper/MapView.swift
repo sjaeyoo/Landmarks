@@ -9,7 +9,7 @@ struct MapView: View {
     
     var body: some View {
         Map(position:
-                // 맵뷰의 시작좌표가 변할 일 없으므로 constant 처리해서 Binding 처리를 절약
+                // 원래 바인딩으로 넘겨주는 값인데 어차피 시작점에서 고정값으로 받는거나 다름없으니 constant 처리
                 .constant(
                     .region(region)
                 ))

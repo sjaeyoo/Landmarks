@@ -2,13 +2,21 @@
 import SwiftUI
 
 struct LandmarkDetail: View {
-    
+    @Environment(ModelData.self) var modelData
     
     var landmark: Landmark
+    
+    
+    var landmarkIndex: Int {
+        modelData.landmarks.firstIndex(where: { $0.id == landmark.id })!
+    }
     
     var body: some View {
         
         ScrollView {
+            // Environment 로 받은 값을 FavoriteButton 에 binding 해서 사용하기 위한 Binding wrapping. 
+            @Bindable var modelData = modelData
+            
             // 높이 300 고정 Map View 상단 배치
             MapView(coordinate: landmark.locationCoordinate)
                 .frame(height:300)
@@ -21,8 +29,12 @@ struct LandmarkDetail: View {
             // VStack 의 alignment .leading 은 왼쪽 정렬.
             VStack(alignment: .leading) {
                 
-                Text(landmark.name)
-                    .font(.title)
+                HStack {
+                    Text(landmark.name)
+                        .font(.title)
+                    FavoriteButton(isSet: $modelData.landmarks[landmarkIndex].isFavorite)
+                }
+                
                 HStack {
                     Text(landmark.park)
                         .font(.subheadline)
@@ -49,5 +61,8 @@ struct LandmarkDetail: View {
 }
 
 #Preview {
-    LandmarkDetail(landmark: ModelData().landmarks[0])
+    let modelData = ModelData()
+    
+    return LandmarkDetail(landmark: modelData.landmarks[0])
+        .environment(modelData)
 }
