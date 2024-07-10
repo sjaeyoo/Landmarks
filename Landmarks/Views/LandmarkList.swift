@@ -3,8 +3,19 @@
 import SwiftUI
 
 struct LandmarkList: View {
+    // State property 의 변화 시 영향받는 모든 뷰는 다시 render 됨. 선언형 UI 의 특징
+    // State property 는 외부에서 값을 변경해도 뷰 내부에서 변경을 감지하지 못함. private 으로 선언하는 편이 안전함
+    // 외부의 영향을 받게 하고 싶으면 Binding 으로 처리
+    @State private var showFavoritesOnly = false
     
     var landmarks: [Landmark]
+    
+    // computed property 로 landmark 필터링. showFavoritesOnly 가 State기 때문에 변화의 영향을 filteredLandmarks 도 받음.
+    var filteredLandmarks: [Landmark] {
+        landmarks.filter { landmark in
+            (!showFavoritesOnly || landmark.isFavorite)
+        }
+    }
     
     var body: some View {
         
@@ -13,15 +24,23 @@ struct LandmarkList: View {
         // NavigationSplitView 는 iPad 나 MacOS 에서 큰 화면 표시에 적합하다.
         // NavigationSplitView 를 iOS 에서 실행하면 기본적으로 sidebar 부분이 표시된다.
         NavigationSplitView {
-            List(landmarks) { landmark in
-                // 이동할 View(destination)은 NavigationLink 를 사용.
-                // 이 NavigationLink 로 감싸지면 ListView item 에 ">" 기호로 link item 임이 표기됨
-                NavigationLink {
-                    LandmarkDetail(landmark: landmark)  // List 의 item 선택 시 이동할 view
-                } label: {
-                    LandmarkRow(landmark: landmark) //List의 목록에 표기되는 view 리스트
+            List {
+                // List 안에 여러 view 들이 복합적으로 배치 가능.
+                Toggle(isOn: $showFavoritesOnly) {
+                    Text("Favorites only")
+                }
+                
+                ForEach(filteredLandmarks) { landmark in
+                    // 이동할 View(destination)은 NavigationLink 를 사용.
+                    // 이 NavigationLink 로 감싸지면 ListView item 에 ">" 기호로 link item 임이 표기됨
+                    NavigationLink {
+                        LandmarkDetail(landmark: landmark)  // List 의 item 선택 시 이동할 view
+                    } label: {
+                        LandmarkRow(landmark: landmark) //List의 목록에 표기되는 view 리스트
+                    }
                 }
             }
+            .animation(.default, value: filteredLandmarks) // 기본 애니메이션 설정. filteredLandmarks 에 변화가 발생할 때 동작
             .navigationTitle("Landmarks")   // navigation title. Navigation View 안의 여러 뷰가 타이틀을 사용하는 경우 첫번째 항목이 표시됨.
         } detail: {
             Text("Select a Landmark")

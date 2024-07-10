@@ -29,6 +29,7 @@ struct Landmark: Hashable, Codable, Identifiable {
     var park: String
     var state: String
     var description: String
+    var isFavorite: Bool
     
     
     private var imageName: String       // json 내에 있는 imageName string property. serialize/deserialize 때 빼고는 쓸 일 없으니까 private 로 선언
