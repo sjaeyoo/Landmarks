@@ -8,6 +8,9 @@ import Foundation
 class ModelData {
     // landmark 데이터를 Observable 내부로 이동
     var landmarks: [Landmark] = load("landmarkData.json")
+    
+    // hikeData 로드
+    var hikes: [Hike] = load("hikeData.json")
 }
 
 
