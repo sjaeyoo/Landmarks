@@ -31,15 +31,9 @@ struct HikeView: View {
                     Label("Graph", systemImage: "chevron.right.circle")
                         .labelStyle(.iconOnly)
                         .imageScale(.large)
-                    // 회전 애니메이션.
                         .rotationEffect(.degrees(showDetail ? 90 : 0))
-                    // rotation 애니메이션 비활성화.
-                        .animation(nil, value: showDetail)
-                    // 크기 애니메이션.
                         .scaleEffect(showDetail ? 1.5 : 1 )
                         .padding()
-                    // 애니메이션 타입 easeInOut 으로 설정.
-                        .animation(.easeInOut, value: showDetail)
                 }
             }
 
