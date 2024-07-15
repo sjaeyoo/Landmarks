@@ -5,7 +5,7 @@ import Foundation
 
 struct Profile {
     var username: String
-    var profileNotifications: Bool = true
+    var preferNotifications: Bool = true
     var seasonalPhoto = Season.winter
     var goalDate = Date()
     

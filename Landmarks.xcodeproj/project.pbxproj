@@ -43,6 +43,7 @@
 		2FED04222C44E8A000DD62BE /* ProfileHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FED04212C44E8A000DD62BE /* ProfileHost.swift */; };
 		2FED04242C44F10B00DD62BE /* ProfileSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FED04232C44F10B00DD62BE /* ProfileSummary.swift */; };
 		2FED04262C44F1F400DD62BE /* HikeBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FED04252C44F1F400DD62BE /* HikeBadge.swift */; };
+		2FED04282C45182600DD62BE /* ProfileEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FED04272C45182600DD62BE /* ProfileEditor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +103,7 @@
 		2FED04212C44E8A000DD62BE /* ProfileHost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHost.swift; sourceTree = "<group>"; };
 		2FED04232C44F10B00DD62BE /* ProfileSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSummary.swift; sourceTree = "<group>"; };
 		2FED04252C44F1F400DD62BE /* HikeBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HikeBadge.swift; sourceTree = "<group>"; };
+		2FED04272C45182600DD62BE /* ProfileEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -282,6 +284,7 @@
 			children = (
 				2FED04212C44E8A000DD62BE /* ProfileHost.swift */,
 				2FED04232C44F10B00DD62BE /* ProfileSummary.swift */,
+				2FED04272C45182600DD62BE /* ProfileEditor.swift */,
 			);
 			path = Profiles;
 			sourceTree = "<group>";
@@ -420,6 +423,7 @@
 			files = (
 				2FED040B2C40DF2C00DD62BE /* Hike.swift in Sources */,
 				2FED03FE2C3FDB5600DD62BE /* HexagonParameters.swift in Sources */,
+				2FED04282C45182600DD62BE /* ProfileEditor.swift in Sources */,
 				2FED04242C44F10B00DD62BE /* ProfileSummary.swift in Sources */,
 				2FED03BB2C36586300DD62BE /* ContentView.swift in Sources */,
 				2FED041F2C44E61700DD62BE /* Profile.swift in Sources */,

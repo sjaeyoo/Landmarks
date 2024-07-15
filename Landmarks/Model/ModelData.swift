@@ -12,6 +12,9 @@ class ModelData {
     // hikeData 로드
     var hikes: [Hike] = load("hikeData.json")
     
+    // 기본 Profile.
+    var profile = Profile.default
+    
     
     // featured landmark 필터링
     var features: [Landmark] {
