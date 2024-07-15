@@ -3,7 +3,7 @@ import SwiftUI
 struct CategoryHome: View {
     
     @Environment(ModelData.self) var modelData
-    
+    @State private var showingProfile = false
     
     var body: some View {
         
@@ -23,7 +23,19 @@ struct CategoryHome: View {
                 }
                 .listRowInsets(.init()) // inset 없앰
             }
+            .listStyle(.inset)
             .navigationTitle("Featured")
+            .toolbar {
+                Button {
+                    showingProfile.toggle()
+                } label: {
+                    Label("User Profile", systemImage: "person.crop.circle")
+                }
+                .sheet(isPresented: $showingProfile, content: {
+                    ProfileHost()
+                        .environment(modelData)
+                })
+            }
         } detail: {
             Text("Select a landmark")
         }
