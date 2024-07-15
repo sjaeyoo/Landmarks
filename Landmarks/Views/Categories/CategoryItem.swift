@@ -8,10 +8,13 @@ struct CategoryItem: View {
         
         VStack(alignment: .leading) {
             landmark.image
+                .renderingMode(.original)
                 .resizable()
                 .frame(width: 155, height: 155)
                 .clipShape(.rect(cornerRadii: .init(cornerRadius: 5)))
             Text(landmark.name)
+                .foregroundStyle(.primary)
+                .font(.caption)
         }
         .padding(.leading, 15)
         
