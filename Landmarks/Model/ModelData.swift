@@ -11,6 +11,20 @@ class ModelData {
     
     // hikeData 로드
     var hikes: [Hike] = load("hikeData.json")
+    
+    
+    // featured landmark 필터링
+    var features: [Landmark] {
+        landmarks.filter( { $0.isFeatured })
+    }
+    
+    /// category 에 해당하는 랜드마크 리스트 매핑.
+    var categories: [String: [Landmark]] {
+        Dictionary (
+            grouping: landmarks,
+            by: { $0.category.rawValue }
+        )
+    }
 }
 
 

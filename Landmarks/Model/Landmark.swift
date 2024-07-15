@@ -30,7 +30,9 @@ struct Landmark: Hashable, Codable, Identifiable {
     var state: String
     var description: String
     var isFavorite: Bool
+    var isFeatured: Bool
     
+    var category: Category
     
     private var imageName: String       // json 내에 있는 imageName string property. serialize/deserialize 때 빼고는 쓸 일 없으니까 private 로 선언
     
@@ -41,6 +43,13 @@ struct Landmark: Hashable, Codable, Identifiable {
     struct Coordinates: Hashable, Codable {
         var latitude: Double
         var longitude: Double
+    }
+    
+    
+    enum Category: String, CaseIterable, Codable {
+        case lakes = "Lakes"
+        case rivers = "Rivers"
+        case mountains = "Mountains"
     }
 }
 
