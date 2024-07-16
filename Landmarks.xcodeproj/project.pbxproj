@@ -47,6 +47,7 @@
 		2FED042B2C4636BC00DD62BE /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FED042A2C4636BC00DD62BE /* PageViewController.swift */; };
 		2FED042D2C46464900DD62BE /* FeatureCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FED042C2C46464900DD62BE /* FeatureCard.swift */; };
 		2FED042F2C46489E00DD62BE /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FED042E2C46489E00DD62BE /* PageView.swift */; };
+		2FED04312C465C7300DD62BE /* PageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FED04302C465C7300DD62BE /* PageControl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +111,7 @@
 		2FED042A2C4636BC00DD62BE /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		2FED042C2C46464900DD62BE /* FeatureCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureCard.swift; sourceTree = "<group>"; };
 		2FED042E2C46489E00DD62BE /* PageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageView.swift; sourceTree = "<group>"; };
+		2FED04302C465C7300DD62BE /* PageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -302,6 +304,7 @@
 			children = (
 				2FED042A2C4636BC00DD62BE /* PageViewController.swift */,
 				2FED042E2C46489E00DD62BE /* PageView.swift */,
+				2FED04302C465C7300DD62BE /* PageControl.swift */,
 			);
 			path = PageView;
 			sourceTree = "<group>";
@@ -470,6 +473,7 @@
 				2FED04112C410D0E00DD62BE /* GraphCapsule.swift in Sources */,
 				2FED03F82C3D547000DD62BE /* LandmarkDetail.swift in Sources */,
 				2FED03FA2C3EDF0400DD62BE /* FavoriteButton.swift in Sources */,
+				2FED04312C465C7300DD62BE /* PageControl.swift in Sources */,
 				2FED03EF2C3D305A00DD62BE /* ModelData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

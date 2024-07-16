@@ -10,12 +10,11 @@ struct CategoryHome: View {
         NavigationSplitView {
             
             List {
-                modelData.features[0].image
-                    .resizable()
-                    .scaledToFill()
-                    .frame(height: 200)
-                    .clipped()
-                    .listRowInsets(.init()) // inset 없앰
+                PageView(pages:
+                            modelData.features.map({
+                    FeatureCard(landmark:  $0)})
+                )
+                .listRowInsets(EdgeInsets())
                 
                 
                 ForEach (modelData.categories.keys.sorted(), id: \.self) { key in
