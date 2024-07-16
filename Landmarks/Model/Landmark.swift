@@ -68,4 +68,9 @@ extension Landmark {
     var locationCoordinate: CLLocationCoordinate2D {
         CLLocationCoordinate2D(latitude: coordinates.latitude, longitude: coordinates.longitude)
     }
+    
+    // featured 인 경우 featured image 추가
+    var featureImage: Image? {
+        isFeatured ? Image(imageName + "_feature") : nil
+    }
 }
