@@ -4,9 +4,14 @@ struct PageView<Page: View>: View {
     
     var pages: [Page]
     
+    @State private var currentPage: Int = 0
+    
     var body: some View {
-        PageViewController(pages: pages)
-            .aspectRatio(3.0/2.0, contentMode: .fit)
+        VStack {
+            PageViewController(pages: pages, currentPage: $currentPage)
+            Text("Current Page: \(currentPage)")
+        }
+        .aspectRatio(3.0/2.0, contentMode: .fit)
     }
 }
 
